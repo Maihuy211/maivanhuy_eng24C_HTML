@@ -1,52 +1,65 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Điền Thông Tin</title>
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    <h2>Hãy tạo ra một form điền thông tin cơ bản sau</h2>
-    <form>
-        <label>Họ và tên:</label>
-        <input type="text" name="fullname" required><br><br>
-        
-        <label>Email:</label>
-        <input type="email" name="email" required><br><br>
-        
-        <label>Ngày sinh:</label>
-        <input type="date" name="dob" required><br><br>
-        
-        <label>Giới tính:</label>
-        <input type="radio" name="gender" value="Nam"> Nam
-        <input type="radio" name="gender" value="Nữ"> Nữ<br><br>
-        
-        <label>Số điện thoại:</label>
-        <input type="tel" name="phone"><br><br>
-        
-        <label>Chuyên ngành:</label>
-        <input type="text" name="major"><br><br>
-        
-        <label>Năm nhập học:</label>
-        <input type="number" name="year" min="1900" max="2099"><br><br>
-        
-        <label>Điểm GPA:</label>
-        <input type="number" name="gpa" step="0.01" min="0" max="4.0"><br><br>
-        
-        <label>Địa chỉ:</label>
-        <textarea name="address"></textarea><br><br>
-        
-        <label>Lớp học:</label>
-        <select name="class">
-            <option value="Lớp 1">Lớp 1</option>
-            <option value="Lớp 2">Lớp 2</option>
-            <option value="Lớp 3">Lớp 3</option>
-        </select><br><br>
-        
-        <label>Ngày đăng ký học:</label>
-        <input type="datetime-local" name="register_date"><br><br>
-        
-        <button type="submit">Gửi thông tin</button>
-    </form>
+    <div class="container">
+        <form>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Your name..">
+            
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Your last name..">
+            
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+            </select>
+            
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." rows="4"></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
